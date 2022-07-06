@@ -1,0 +1,35 @@
+﻿@model CvSitem.Models.Siniflar.Deneyimler
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Deneyim Güncelleme</h2>
+<br />
+
+@using (Html.BeginForm("DeneyimGuncelle", "Deneyim", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.ID)
+        <label>Başlık</label>
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        <br />
+
+        <label>Alt Başlık</label>
+        @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+        <br />
+
+        <label>Açıklama</label>
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+        <br />
+
+        <label>Tarih</label><br />
+        @Html.TextBoxFor(x => x.Tarih, "{0:d.MM.yyyy}" ,new { @class = "form-control" })
+        <br />
+
+    </div>
+    <div>
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}
+

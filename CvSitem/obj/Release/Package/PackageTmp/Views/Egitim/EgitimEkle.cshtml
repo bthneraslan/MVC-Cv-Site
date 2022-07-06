@@ -1,0 +1,27 @@
+﻿@model  CvSitem.Models.Siniflar.Egitim
+@{
+    ViewBag.Title = "EgitimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Eğitim Ekleme</h2>
+<br />
+
+<form class="form-group" method="post">
+    <label>Okul</label>
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    <label>Bölüm</label>
+    @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+    <br />
+    <label>Alan</label>
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <label>Ortalama</label>
+    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+    <br />
+    <label>Mezuniyet Tarih</label>
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Ekle</button>
+</form>

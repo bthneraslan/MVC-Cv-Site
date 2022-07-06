@@ -1,0 +1,21 @@
+﻿@model CvSitem.Models.Siniflar.Hobiler
+@{
+    ViewBag.Title = "HobiGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Hobi Güncelleme</h2>
+<br />
+
+@using (Html.BeginForm("HobiGuncelle", "Hobi", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.ID)
+        <label>Hobi</label>
+        @Html.TextBoxFor(x => x.Hobi, new { @class="form-control"})
+    </div>
+    <br />
+    <div>
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}

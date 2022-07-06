@@ -1,0 +1,27 @@
+﻿@model CvSitem.Models.Siniflar.Deneyimler
+@{
+    ViewBag.Title = "DeneyimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Deneyim Ekleme Sayfası</h2>
+<br />
+
+<form class="form-group" method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    <label>Alt Başlık</label>
+    @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <label>Tarih</label>
+    @*@Html.TextBoxFor(x => x.Tarih, new { @class = "form-control", placeholder="gg/aa/yyyy" })*@
+    <br />
+    <input type="date" name="Tarih"  />
+    <br />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>

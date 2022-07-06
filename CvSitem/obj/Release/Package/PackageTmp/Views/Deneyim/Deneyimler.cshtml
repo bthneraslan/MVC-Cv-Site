@@ -1,0 +1,38 @@
+﻿@using CvSitem.Models.Siniflar
+@model List<Deneyimler>
+
+@{
+    ViewBag.Title = "Deneyimler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Deneyimler</h2>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Açıklama</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <th>@i.ID</th>
+                <td>@i.Baslik</td>
+                <td>@i.AltBaslik</td>
+                <td>@i.Aciklama</td>
+                <td>@i.Tarih.ToShortDateString()</td>
+                <td><a href="/Deneyim/DeneyimSil/@i.ID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Deneyim/DeneyimGetir/@i.ID" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Deneyim/DeneyimEkle/" class="btn btn-success">Deneyim Ekle</a>

@@ -1,0 +1,15 @@
+﻿@model CvSitem.Models.Siniflar.Yetenekler
+@{
+    ViewBag.Title = "YetenekEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yetenek Ekleme</h2>
+<br>
+
+<form class="form-group" method="post">
+    <label>Yetenek</label>
+    @Html.TextBoxFor(x=>x.Yetenek, new { @class="form-control"})
+    <br />
+    <button class="btn btn-primary">Ekle</button>
+</form>

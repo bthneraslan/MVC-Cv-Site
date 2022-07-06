@@ -1,0 +1,31 @@
+﻿@using CvSitem.Models.Siniflar
+@model List<Hobiler>
+@{
+    ViewBag.Title = "Hobiler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Hobiler</h2>
+<br />
+
+
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Hobi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    <tbody>
+        @foreach(var i in Model)
+        {
+            <tr>
+                <th>@i.ID</th>
+                <td>@i.Hobi</td>
+                <td><a href="/Hobi/HobiSil/@i.ID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Hobi/HobiGetir/@i.ID" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Hobi/HobiEkle" class="btn btn-success">Hobi Ekle</a>

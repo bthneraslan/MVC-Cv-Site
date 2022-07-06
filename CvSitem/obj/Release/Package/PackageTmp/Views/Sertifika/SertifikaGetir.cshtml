@@ -1,0 +1,22 @@
+﻿@model CvSitem.Models.Siniflar.Sertifikalar
+@{
+    ViewBag.Title = "SertifikaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Sertifika Güncelleme</h2>
+<br />
+
+@using (Html.BeginForm("SertifikaGuncelle", "Sertifika", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.ID)
+
+        <label>Sertifika</label>
+        @Html.TextBoxFor(x => x.Sertifika, new { @class="form-control"})
+    </div>
+    <br />
+    <div>
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}

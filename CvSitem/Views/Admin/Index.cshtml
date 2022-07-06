@@ -1,0 +1,50 @@
+﻿@model CvSitem.Models.Siniflar.Hakkinda
+
+@{
+    ViewBag.Title = "HakkimdaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<br />
+<h2>Hakkımda Güncelleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("HakkimdaGuncelle", "Admin", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>AD</label>
+        @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+        <br />
+
+        <label>Soyad</label>
+        @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+        <br />
+        <label>Adres</label>
+        @Html.TextBoxFor(x => x.Adres, new { @class = "form-control" })
+        <br />
+
+        <label>Mail</label>
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+        <br />
+
+        <label>Telefon</label>
+        @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
+        <br />
+
+        <label>Açıklama</label>
+        @Html.TextAreaFor(x => x.KisaNot, new { @class = "form-control",rows="5",column="5" })
+        <br />
+        @Html.HiddenFor(x => x.ID)
+    </div>
+
+    <div style="margin-top:15px">
+        <button class="btn btn-warning" id="btn1">Güncelle</button>
+    </div>
+}
+
+<script>
+    $('#btn1').click(function () {
+        alert("Güncelleme yapıldı!");
+    });
+</script>

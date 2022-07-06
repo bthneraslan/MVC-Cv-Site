@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Admin Paneli Giriş</title>
+    <!-- Custom Theme files -->
+    <link href="~/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Square login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <!--Google Fonts-->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!--Google Fonts-->
+</head>
+<body>
+    <!--header start here-->
+    <div class="login-form">
+        <div class="top-login">
+            <span><img src="~/web/images/group.png" alt="" /></span>
+        </div>
+        <h1>Login</h1>
+        <div class="login-top">
+            <form method="post">
+                @using (Html.BeginForm("Login2", "Login", FormMethod.Post))
+                {
+                    <input type="text" class="name" name="KullaniciAdi" Placeholder="Mail adresiniz..." required="" />
+                    <input type="password" class="password" name="Sifre" Placeholder="Şifreniz..." required="" />
+                    <input type="submit" value="Giriş Yap">
+                }
+            </form>
+        </div>
+        <p class="copy">Cv Sitesi Admin Paneli Giriş</a></p>
+    </div>
+    <!--header start here-->
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿@model CvSitem.Models.Siniflar.Sertifikalar
+@{
+    ViewBag.Title = "SertifikaEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Sertifika Ekleme</h2>
+<br />
+
+<form class="form-group" method="post">
+    <label>Sertifika</label>
+    @Html.TextBoxFor(x => x.Sertifika, new { @class="form-control"})
+    <br />
+    <button class="btn btn-primary">Ekle</button>
+</form>
